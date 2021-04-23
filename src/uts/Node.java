@@ -1,5 +1,5 @@
 package uts;
-import uts.modes.User;
+import uts.models.User;
 
 public class Node {
     private User data = null;
@@ -36,7 +36,7 @@ public class Node {
         this.next = next;
     }
 
-    public void setprev(Node prev) {
+    public void setPrev(Node prev) {
         this.prev = prev;
     }
 }

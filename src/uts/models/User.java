@@ -1,4 +1,4 @@
-package uts.modes;
+package uts.models;
 
 public class User {
     public String name;

@@ -1,6 +1,6 @@
 import uts.Node;
 import uts.NodeService;
-import uts.modes.User;
+import uts.models.User;
 
 public class Main {
     /**
@@ -19,21 +19,18 @@ public class Main {
 
         for (Node node : nodes.getAll()) {
             System.out.println("Data Node : " + node.data().name + " " + node.data().nim);
-            System.out.println("Prev Node : " + (node.hasPrev() ?  node.prev().data().name : "No chain"));
-            System.out.println("Next Node : " + (node.hasNext() ?  node.next().data().name : "No chain"));
+            System.out.println("Prev Node : " + (node.hasPrev() ? node.prev().data().name : "No chain"));
+            System.out.println("Next Node : " + (node.hasNext() ? node.next().data().name : "No chain"));
             System.out.println("===================================");
         }
 
         System.out.println("========== Iterator ===========");
 
-
         Node currentNode = nodes.getAll().getFirst();
 
-//        System.out.println(nodes.getAll().get(1).prev().data().name);
-
         while (currentNode.hasNext()) {
-            System.out.println("Name : " +currentNode.data().name);
-            System.out.println("Nim  : "+ currentNode.data().nim);
+            System.out.println("Name : " + currentNode.data().name);
+            System.out.println("Nim  : " + currentNode.data().nim);
             currentNode = currentNode.next();
 
             System.out.println("=====================");

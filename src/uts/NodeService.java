@@ -1,7 +1,6 @@
 package uts;
 
 import java.util.LinkedList;
-import uts.modes.User;
 
 public class NodeService {
     private LinkedList<Node> nodes = new LinkedList<Node>();
@@ -19,9 +18,9 @@ public class NodeService {
             // single
             previousNode.setNext(currentNode);
             // double
-            currentNode.setprev(previousNode);
+            currentNode.setPrev(previousNode);
             // circular
-            firstNode.setprev(currentNode);
+            firstNode.setPrev(currentNode);
             currentNode.setNext(firstNode);
         }
     }
